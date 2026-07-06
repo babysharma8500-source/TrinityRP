@@ -22,3 +22,19 @@ stock ShowRegisterDialog(playerid)
 
     return 1;
 }
+stock HandleAccountDialog(playerid, dialogid, response, inputtext[])
+{
+    if(dialogid == DIALOG_REGISTER)
+    {
+        if(!response)
+        {
+            Kick(playerid);
+            return 1;
+        }
+
+        SendClientMessage(playerid, -1, "Account created successfully!");
+        return 1;
+    }
+
+    return 0;
+}
