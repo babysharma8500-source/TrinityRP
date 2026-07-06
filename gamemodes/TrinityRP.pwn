@@ -39,6 +39,7 @@ public OnPlayerConnect(playerid)
 {
     ShowRegisterDialog(playerid);
     return 1;
+}
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
     if(dialogid == DIALOG_REGISTER)
