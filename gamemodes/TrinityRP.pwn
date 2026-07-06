@@ -37,6 +37,6 @@ public OnGameModeInit()
 
 public OnPlayerConnect(playerid)
 {
-    SendClientMessage(playerid, -1, "Welcome to Trinity RP!");
+    ShowRegisterDialog(playerid);
     return 1;
 }
