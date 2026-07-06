@@ -5,3 +5,4 @@
 
 new PlayerPassword[MAX_PLAYERS][64];
 new bool:PlayerLogged[MAX_PLAYERS];
+new PlayerName[MAX_PLAYERS][24];
