@@ -39,8 +39,28 @@ public OnPlayerConnect(playerid)
 {
     ShowRegisterDialog(playerid);
     return 1;
-}
 public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 {
+    if(dialogid == DIALOG_REGISTER)
+    {
+        if(!response)
+        {
+            Kick(playerid);
+            return 1;
+        }
+
+        if(strlen(inputtext) < 4)
+        {
+            SendClientMessage(playerid, -1, "Password must be at least 4 characters.");
+            ShowRegisterDialog(playerid);
+            return 1;
+        }
+
+        format(PlayerPassword[playerid], 64, "%s", inputtext);
+        PlayerLogged[playerid] = true;
+
+        SendClientMessage(playerid, -1, "Registration successful!");
+    }
+
     return 1;
 }
