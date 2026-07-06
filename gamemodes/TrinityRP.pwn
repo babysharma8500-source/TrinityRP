@@ -2,6 +2,7 @@
 
 #include "include/dialogs.pwn"
 #include "include/player.pwn"
+#include "include/account.pwn"
 
 main()
 {
